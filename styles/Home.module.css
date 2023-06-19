@@ -4,11 +4,10 @@
   min-height: 100vh;
   padding: 0 0.5rem;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: hsl(189, 41%, 97%);
-  font-family: 'Space Mono', monospace;
+  background-color: hsl(185, 41%, 84%);
+
 }
 
 .main {
@@ -77,6 +76,7 @@
 
 .card {
   margin: 1rem;
+  width:54rem;
   flex-basis: 45%;
   padding: 1.5rem;
   text-align: left;
@@ -85,27 +85,69 @@
   border: 1px solid #eaeaea;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
+  font-family: 'Space Mono', monospace;
+
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
 
-.card h3 {
-  margin: 0 0 1rem 0;
+
+.button{
+  background-color:hsl(183, 100%, 15%);
+  width:8rem;
   font-size: 1.5rem;
 }
+.button:hover  {
+ background-color:hsl(172, 67%, 45%);
+  width:8rem;
+  color:hsl(186, 14%, 43%);
+}
+.totalAmount{
+  width:23rem;
+  background-color:hsl(183, 100%, 15%);
+  height:25rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+}
+.tipPerson{
+  width:19rem;
+  display: flex;
+  margin-top: 15%;
+  color: white;
+}
+.tipPersonText{
+  color:hsl(172, 67%, 45%);
+  font-size: 3rem;
+  margin-left: auto;
+}
+.totalPerson{
+  color: white;
+
+  width:19rem;
+  display: flex;
+margin-bottom: 20%;
+}
+.totalPersonText{
+  color:hsl(172, 67%, 45%);
+  font-size: 3rem;
+  margin-left: auto;
+
 }
 
+.resetButton{
+  background-color: hsl(182, 97%, 12%);
+  color:hsl(183, 100%, 15%);
+  height: 40px;
+  width:80%;
+  border-radius: 5px;
+}
+ .resetButton:hover{
+  background-color:hsl(172, 67%, 45%);
 
+}
 @media (max-width: 600px) {
   .grid {
     width: 100%;
