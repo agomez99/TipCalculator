@@ -76,7 +76,7 @@
 
 .card {
   margin: 1rem;
-  width:54rem;
+  width:60rem;
   flex-basis: 45%;
   padding: 1.5rem;
   text-align: left;
@@ -88,21 +88,33 @@
   font-family: 'Space Mono', monospace;
 
 }
-
-
+.tipAmount{
+  height:26rem;
+}
+.tipButtons{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0%;
+  margin-bottom:10%;
+}
 
 .button{
   background-color:hsl(183, 100%, 15%);
   width:8rem;
   font-size: 1.5rem;
+  margin-right:3%;
+  margin-top:3%;
 }
 .button:hover  {
  background-color:hsl(172, 67%, 45%);
   width:8rem;
   color:hsl(186, 14%, 43%);
 }
+
 .totalAmount{
-  width:23rem;
+  width:25rem;
   background-color:hsl(183, 100%, 15%);
   height:25rem;
   border-radius: 10px;
@@ -112,11 +124,12 @@
   align-items: center;
 
 }
-.tipPerson{
-  width:19rem;
-  display: flex;
+.tipText{
   margin-top: 15%;
   color: white;
+  margin-right:auto;
+  font-size: 0.8rem;
+  display: flex;
 }
 .tipPersonText{
   color:hsl(172, 67%, 45%);
@@ -128,7 +141,7 @@
 
   width:19rem;
   display: flex;
-margin-bottom: 20%;
+  margin-bottom: 20%;
 }
 .totalPersonText{
   color:hsl(172, 67%, 45%);
@@ -152,5 +165,15 @@ margin-bottom: 20%;
   .grid {
     width: 100%;
     flex-direction: column;
+  }
+  .container{
+    justify-content: space-between;
+  }
+
+  .card{
+    width:auto;
+  }
+  .inputForm{
+    height:20rem;
   }
 }
