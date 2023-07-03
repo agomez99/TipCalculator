@@ -4,8 +4,8 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/agomez99/TipCalculator](https://github.com/agomez99/TipCalculator)
+- Live Site URL: [https://tip-calculator-liard.vercel.app/](https://tip-calculator-liard.vercel.app/)
 
 
 ### Built with
