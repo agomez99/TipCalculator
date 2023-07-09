@@ -58,9 +58,12 @@ export default function Home() {
                       placeholder='$'
                       id='billAmount'
                       value={billAmount}
+                      className={styles.input}
                       style={{ width: '100%', height: '50px' }}
                       onChange={(e) => setBillAmount(e.target.value)}
                     />
+                  <Image src='/images/icon-dollar.svg' width={20} height={20} alt="dollar-icon" className={styles.dollarIcon} />
+
                   </Form.Group>
                   <p>Select Tip %</p>
 
@@ -95,27 +98,36 @@ export default function Home() {
                       required
                       autoFocus
                     />
+                    <Image src='/images/icon-person.svg' width={20} height={20} alt="person-icon" className={styles.personIcon} />
                   </Form.Group>
                 </Form>
               </Col>
               <Col md={6} sm={12}>
                 <div className={styles.totalAmount}>
-                  <p>Total ${billAmount + ((billAmount * tipPercentage) / 100)}</p>
+{/*                   <p>Total ${billAmount + ((billAmount * tipPercentage) / 100)}</p>
+ */}
+                  <div className='d-flex mb-5'>
                   <div className={styles.tipText}>
-                    <p>Tip Amount</p>
-                    <p>/ per person</p>
-                    <p className={styles.tipPersonText}>{(totalTipAmount() / numPeople).toFixed(2)}</p>
+                    <p>Tip Amount</p> <p>/ per person</p>
                   </div>
-                  <p className={styles.tipText}>
-                    Total / per Person <span className={styles.totalPersonText}>{(totalAmountPerPerson())}</span>
-                  </p>
-                  <Button
-                    className={styles.button}
+                  <span className={styles.tipPersonText}>{(totalTipAmount() / numPeople).toFixed(2)}</span>
+                  </div>
+                  <div className='d-flex'>
+                  <div className={styles.tipText}>
+                   <p> Total </p> <p>/ per Person </p> 
+                  </div>
+                  <span className={styles.totalPersonText}>{(totalAmountPerPerson())}</span>
+
+                  </div>
+                  <div className="d-flex justify-content-center">
+                  <button
+                    className={styles.resetBtn}
                     onClick={reset}
-                    style={{ width: '90%' }}
                   >
                     RESET
-                  </Button>
+                  </button>
+                  </div>
+
                 </div>
               </Col>
 

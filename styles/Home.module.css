@@ -47,9 +47,30 @@
   line-height: 1.5;
   font-size: 1.5rem;
 }
+.input{
+  font-size: 1.6rem;
+  text-align: right;
+  color:hsl(183, 100%, 15%);
+  background-color:hsl(189, 41%, 97%);
 
+}
+.personIcon {
+  position: absolute;
+  top: 85%;
+  left:5%;
+  transform: translateY(-50%);
+}
+.dollarIcon{
+  position: absolute;
+  top:19%;
+  left:5%;
+  transform: translateY(-50%);
+}
+.input:focus{
+  color:hsl(183, 100%, 15%);
+  background-color:hsl(189, 41%, 97%);
 
-
+}
 .grid {
   display: flex;
   align-items: center;
@@ -101,23 +122,34 @@
   background-color:hsl(172, 67%, 45%);
 
 }
+
+.resetBtn{
+  width: 90%;
+  height:50px;
+  background-color: hsl(172, 67%, 45%);
+  border:none;
+  color: hsl(183, 100%, 15%);;
+  border-radius: 5px;
+}
+.resetBtn:hover, .resetBtn:focus{
+  background-color: rgba(13,104,109,255);
+}
 .totalAmount{
-  width:25rem;
   background-color:hsl(183, 100%, 15%);
   height:25rem;
   border-radius: 10px;
+  padding: 5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 
 }
 .tipText{
-  margin-top: 15%;
   color: white;
   margin-right:auto;
   font-size: 0.8rem;
-  display: flex;
+  display:block;
+ 
 }
 .tipPersonText{
   color:hsl(172, 67%, 45%);
