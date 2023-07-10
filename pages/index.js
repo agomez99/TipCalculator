@@ -44,29 +44,26 @@ export default function Home() {
       <Container fluid className={styles.container}>
         <main className={styles.main}>
           <h1 className={styles.title}>
-            <Image src='/images/logo.svg' width={70} height={70} />
+            <Image src='/images/logo.svg' width={70} height={70} alt="logo" />
           </h1>
 
           <Card className={styles.card}>
             <Row>
               <Col md={6} sm={12} className={styles.tipAmount}>
                 <Form>
-                  <Form.Group className='mb-3' controlId='formBill'>
+                  <Form.Group className='mb-3'>
                     <Form.Label>Bill</Form.Label>
                     <Form.Control
                       type='number'
                       placeholder='$'
-                      id='billAmount'
                       value={billAmount}
                       className={styles.input}
                       style={{ width: '100%', height: '50px' }}
                       onChange={(e) => setBillAmount(e.target.value)}
                     />
-                  <Image src='/images/icon-dollar.svg' width={20} height={20} alt="dollar-icon" className={styles.dollarIcon} />
-
+                    <Image src='/images/icon-dollar.svg' width={20} height={20} alt="dollar-icon" className={styles.dollarIcon}  />
                   </Form.Group>
-                  <p>Select Tip %</p>
-
+                  <p className="mb-0">Select Tip %</p>
                   <div className={styles.tipButtons}>
                     {[5, 10, 15, 25, 50].map((tip) => (
                       <Button
@@ -82,12 +79,10 @@ export default function Home() {
                     </Button>
                   </div>
 
-                  <Form.Group controlId='formNumPeople'>
+                  <Form.Group >
                     <Form.Label>Number of People</Form.Label>
                     <Form.Control
                       type='number'
-                      placeholder=""
-                      id=''
                       value={numPeople}
                       onChange={(e) => setNumPeople(e.target.value)}
                       className={styles.input}
@@ -98,39 +93,37 @@ export default function Home() {
                       required
                       autoFocus
                     />
-                    <Image src='/images/icon-person.svg' width={20} height={20} alt="person-icon" className={styles.personIcon} />
+                 <Image src='/images/icon-person.svg' width={20} height={20} alt="person-icon" className={styles.personIcon} />
                   </Form.Group>
                 </Form>
               </Col>
               <Col md={6} sm={12}>
                 <div className={styles.totalAmount}>
-{/*                   <p>Total ${billAmount + ((billAmount * tipPercentage) / 100)}</p>
+                  {/*                   <p>Total ${billAmount + ((billAmount * tipPercentage) / 100)}</p>
  */}
                   <div className='d-flex mb-5'>
-                  <div className={styles.tipText}>
-                    <p>Tip Amount</p> <p>/ per person</p>
-                  </div>
-                  <span className={styles.tipPersonText}>{(totalTipAmount() / numPeople).toFixed(2)}</span>
+                    <div className={styles.tipText}>
+                      <p>Tip Amount</p> <p className={styles.perPersonText}>/ per person</p>
+                    </div>
+                    <span className={styles.tipPersonText}>{(totalTipAmount() / numPeople).toFixed(2)}</span>
                   </div>
                   <div className='d-flex'>
-                  <div className={styles.tipText}>
-                   <p> Total </p> <p>/ per Person </p> 
-                  </div>
-                  <span className={styles.totalPersonText}>{(totalAmountPerPerson())}</span>
+                    <div className={styles.tipText}>
+                      <p> Total </p> <p className={styles.perPersonText}>/ per Person </p>
+                    </div>
+                    <span className={styles.totalPersonText}>{(totalAmountPerPerson())}</span>
 
                   </div>
-                  <div className="d-flex justify-content-center">
-                  <button
-                    className={styles.resetBtn}
-                    onClick={reset}
-                  >
-                    RESET
-                  </button>
+                  <div className="d-flex justify-content-center mt-5">
+                    <button
+                      className={styles.resetBtn}
+                      onClick={reset}
+                    >
+                      RESET
+                    </button>
                   </div>
-
                 </div>
               </Col>
-
             </Row>
           </Card>
         </main>

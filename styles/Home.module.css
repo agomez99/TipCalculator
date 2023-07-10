@@ -7,7 +7,6 @@
   justify-content: center;
   align-items: center;
   background-color: hsl(185, 41%, 84%);
-
 }
 
 .main {
@@ -17,19 +16,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-
-
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
 }
 
 .title {
@@ -56,13 +42,13 @@
 }
 .personIcon {
   position: absolute;
-  top: 85%;
+  top: 81%;
   left:5%;
   transform: translateY(-50%);
 }
 .dollarIcon{
   position: absolute;
-  top:19%;
+  top:18%;
   left:5%;
   transform: translateY(-50%);
 }
@@ -89,21 +75,23 @@
   color: inherit;
   text-decoration: none;
   border: 1px solid #eaeaea;
-  border-radius: 10px;
+  border-radius: 15px;
   transition: color 0.15s ease, border-color 0.15s ease;
   font-family: 'Space Mono', monospace;
-
+  background-color: white;
 }
 .tipAmount{
   height:26rem;
 }
 .tipButtons{
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   margin-top: 0%;
   margin-bottom:10%;
+  width:100%;
 }
 
 .button{
@@ -112,6 +100,7 @@
   font-size: 1.5rem;
   margin-right:3%;
   margin-top:3%;
+  border: none;
 }
 .button:hover  {
  background-color:hsl(172, 67%, 45%);
@@ -130,6 +119,7 @@
   border:none;
   color: hsl(183, 100%, 15%);;
   border-radius: 5px;
+  margin-top: 5%;
 }
 .resetBtn:hover, .resetBtn:focus{
   background-color: rgba(13,104,109,255);
@@ -158,7 +148,6 @@
 }
 .totalPerson{
   color: white;
-
   width:19rem;
   display: flex;
   margin-bottom: 20%;
@@ -176,10 +165,15 @@
   height: 40px;
   width:80%;
   border-radius: 5px;
+  padding-top: 25%;
 }
  .resetButton:hover{
   background-color:hsl(172, 67%, 45%);
 
+}
+
+.perPersonText{
+  color:hsl(184, 14%, 56%);
 }
 @media (max-width: 600px) {
   .grid {
@@ -195,5 +189,44 @@
   }
   .inputForm{
     height:20rem;
+  }
+  .totalAmount{
+    height:20rem;
+    padding: 5%;
+  
+  }
+
+  .tipAmount{
+    margin-bottom: 5%;
+  }
+  .tipPersonText{
+    font-size: 1.8rem;
+  }
+  .totalPersonText{
+    font-size: 1.8rem;
+
+  }
+  .main{
+    padding: 0%;
+  }
+  .personIcon {
+    position: absolute;
+    top:51%;
+    left:10%;
+    transform: translateY(-50%);
+  }
+  .dollarIcon{
+    position: absolute;
+    top:10%;
+    left:10%;
+    transform: translateY(-50%);
+  }
+  .tipButtons{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0%;
+    margin-bottom:10%;
   }
 }
