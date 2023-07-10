@@ -20,7 +20,5 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
 - [Styled Components](https://styled-components.com/) - For styles
 
 ## Author
-
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@agomez99](https://www.frontendmentor.io/profile/agomez99)
 
